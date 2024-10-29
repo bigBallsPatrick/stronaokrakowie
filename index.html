@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kraków - Miasto Królów</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Nagłówek strony -->
+        <header>
+            <div class="header-content">
+                <h1>Witamy w Krakowie</h1>
+                <img src="https://w7.pngwing.com/pngs/116/858/png-transparent-computer-icons-meal-food-meal-icon-food-logo-eating-thumbnail.png" alt="Ikona zapiekanki" class="zapiekanka-icon" onclick="openModal()">
+            </div>
+            <p>Odkryj piękno i historię miasta królów</p>
+        </header>
+
+        <!-- Nawigacja -->
+        <nav>
+            <ul>
+                <li><a href="#historia">Historia</a></li>
+                <li><a href="#atrakcje">Atrakcje turystyczne</a></li>
+                <li><a href="#wydarzenia">Wydarzenia</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <!-- Modalne okno z filmem -->
+        <div id="videoModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qNBTpk66Ang?start=466&autoplay=1" 
+                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Kontener główny dla sekcji i tabeli -->
+        <div class="main-container">
+            <!-- Sekcje informacyjne po lewej stronie -->
+            <div class="main-sections">
+                <!-- Sekcja Historia -->
+                <section id="historia">
+                    <h2>Historia Krakowa</h2>
+                    <img src="https://plikimpi.krakow.pl/zalacznik/396666/4.jpg" alt="Zdjęcie Wawelu" class="fade-in">
+                    <p>Kraków to jedno z najstarszych miast w Polsce, znane ze swojej bogatej historii i kultury.</p>
+                </section>
+
+                <!-- Sekcja Atrakcje Turystyczne -->
+                <section id="atrakcje">
+                    <h2>Atrakcje Turystyczne</h2>
+                    <img src="https://european-games.org/wp-content/uploads/2022/12/Krakow-Mainsquare-st-mary-s-basilica-in-main-square-of-krakow-wawel-castle-historic-center-city-with-ancient-architecture.jpeg" alt="Rynek Główny w Krakowie" class="fade-in">
+                    <p>Wawel, Rynek Główny, Sukiennice i wiele więcej czekają na Ciebie!</p>
+                </section>
+
+                <!-- Sekcja Wydarzenia -->
+                <section id="wydarzenia">
+                    <h2>Nadchodzące Wydarzenia</h2>
+                    <img src="https://muno.pl/images/muno-imprezy-cover-photo.jpg" alt="Wydarzenie w Krakowie" class="fade-in">
+                    <p>Bądź na bieżąco z najnowszymi wydarzeniami kulturalnymi i rozrywkowymi w Krakowie.</p>
+                </section>
+
+                <!-- Sekcja Kontakt -->
+                <section id="kontakt">
+                    <h2>Kontakt</h2>
+                    <img src="https://dawnemapykrakowa.pl/wp-content/uploads/2019/10/1912b_Krakow_awers-400x284.jpg" alt="Mapa Krakowa" class="fade-in">
+                    <p>Masz pytania? Skontaktuj się z nami poprzez <a href="mailto:info@krakow.pl">info@krakow.pl</a></p>
+                </section>
+            </div>
+
+            <!-- Tabela z wydarzeniami po prawej stronie -->
+            <aside class="event-table">
+                <h2>Nadchodzące Wydarzenia</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Wydarzenie</th>
+                            <th>Lokalizacja</th>
+                            <th>Cena</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Festiwal Kultury Żydowskiej</td>
+                            <td>Kazimierz</td>
+                            <td>50 zł</td>
+                        </tr>
+                        <tr>
+                            <td>Krakowski Festiwal Filmowy</td>
+                            <td>Kino Pod Baranami</td>
+                            <td>30 zł</td>
+                        </tr>
+                        <tr>
+                            <td>Jarmark Bożonarodzeniowy</td>
+                            <td>Rynek Główny</td>
+                            <td>Bezpłatne</td>
+                        </tr>
+                        <tr>
+                            <td>Koncert Muzyki Klasycznej</td>
+                            <td>Filharmonia Krakowska</td>
+                            <td>80 zł</td>
+                        </tr>
+                        <tr>
+                            <td>Wieczór Stand-upu</td>
+                            <td>Klub Gwarek</td>
+                            <td>40 zł</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Interaktywna mapa Krakowa -->
+                <div class="krakow-map">
+                    <h3>Odkryj Kraków na Mapie</h3>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10292.222553541526!2d19.9333813!3d50.0619476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b78d3c9e8b1%3A0xe3b2c6eaa927ac97!2sRynek%20G%C5%82%C3%B3wny%2C%2033-332%20Krak%C3%B3w!5e0!3m2!1spl!2spl!4v1617281932743!5m2!1spl!2spl" 
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <p>Sprawdź, gdzie znajdują się najważniejsze atrakcje Krakowa, takie jak Rynek Główny, Wawel, czy Kazimierz.</p>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Stopka -->
+        <footer>
+            <p>&copy; 2024 Kraków. Wszelkie prawa zastrzeżone.</p>
+        </footer>
+    </div>
+
+    <!-- Skrypt JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
